@@ -81,6 +81,8 @@ print("Balance: " .. address.balance)
 
 This code should go inside the `jua.go` call.
 
+{{%alert theme="warning" %}}**Make sure you don't forget to `await`!** If you don't await when using k.lua functions, you must pass a callback, or else you will get an error.{{% /alert %}}
+
 ### Using websockets
 K.lua also supports websockets. These allow you to receive event data from the Krist node in realtime.
 
