@@ -86,6 +86,8 @@ This code should go inside the `jua.go` call.
 ### Using websockets
 K.lua also supports websockets. These allow you to receive event data from the Krist node in realtime.
 
+{{%alert theme="warning" %}}**Make sure your privatekey is in the correct format.** If you don't convert the privatekey to the correct privatekey format, you may authenticate as the wrong address. You can read more about wallet privatekey formats [here](../../../krist-api/wallet-formats).{{% /alert %}}
+
 ```lua
 local function openWebsocket()
   local success, ws = await(k.connect, "your-private-key")
