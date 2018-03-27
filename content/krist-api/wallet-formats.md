@@ -35,25 +35,9 @@ sha256("KRISTWALLET" .. privatekey) .. "-000"
 This format is usually used by programs. It applies **no transformations** to the privatekey - it just sends the plain privatekey to the Krist node.
 
 ## kristwallet_username Format
-This is a legacy format originally implemented in [kristwallet_username](https://github.com/KristFoundation/kristwallet_username). It requires both a privatekey and a username. It has two variants: appendhashes, and pre-appendhashes. It is implemented in [KristWeb](https://kristweb.lemmmy.pw) and, of course, [kristwallet_username](https://github.com/KristFoundation/kristwallet_username) itself. 
+This is a legacy format originally implemented in [kristwallet_username](https://github.com/KristFoundation/kristwallet_username). It requires both a privatekey and a username. It is implemented in [KristWeb](https://kristweb.lemmmy.pw), and [kristwallet_username](https://github.com/KristFoundation/kristwallet_username). 
 
-### Pre-appendhashes
-The older format, pre-appendhashes, applies the following transformations:
-
-- Hash the username with sha256
-- Append `^`
-- Hash the password with sha256 and append it
-- Hash the whole string with sha256
-
-#### Plain lua
-This requires a [sha256 API](http://www.computercraft.info/forums2/index.php?/topic/8169-sha-256-in-pure-lua/). Example code to perform these operations would look like this:
-
-```lua
-sha256(sha256(username) .. "^" .. sha256(privatekey))
-```
-
-### Appendhashes
-The newer format, appendhashes, applies the following transformations:
+It applies the following transformations:
 
 - Prepend `KRISTWALLETEXTENSION` to the pre-appendhashes algorithm
 - Hash the whole string with sha256
