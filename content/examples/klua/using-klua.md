@@ -104,6 +104,8 @@ local function openWebsocket()
     print("From: " .. transaction.from)
     print("To: " .. transaction.to)
     print("Value: " .. transaction.value .. " KST")
+    -- Transactions have other properties, including "metadata", "id" and "time".
+    -- Metadata can be parsed using k.parseMeta
   end)
   assert(success, "Failed to subscribe to event")
 end
@@ -113,3 +115,6 @@ jua.go(function()
   -- your other code
 end)
 ```
+
+Available events can be found in the [Krist API documentation](http://krist.ceriat.net/docs/#api-WebsocketGroup-WebsocketStart). These can be subscribed to as transactions are in the example above. Multiple events can be subscribed to at once.
+It may also be useful to connect some sort of indicator to the `keepalive` event if `k.lua` is being used in ComputerCraft, so that it is easy to tell whether a computer is functioning or not.
