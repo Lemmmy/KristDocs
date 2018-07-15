@@ -56,15 +56,15 @@ end)
 ### Supported API calls
 K.lua currently supports the following API calls:
 
-- [`address(address)`](https://github.com/justync7/k.lua/blob/master/k.lua#L48) ([api docs](http://krist.ceriat.net/docs/#api-AddressGroup-GetAddress)) - Gets information about an address, such as its balance
-- [`addressTransactions(address, limit, offset)`](https://github.com/justync7/k.lua/blob/master/k.lua#L55) ([api docs](http://krist.ceriat.net/docs/#api-AddressGroup-GetAddressTransactions)) - Gets recent transactions by an address
-- [`addressNames(address)`](https://github.com/justync7/k.lua/blob/master/k.lua#61) ([api docs](http://krist.ceriat.net/docs/#api-AddressGroup-GetAddressNames)) - Gets names owned by an address
-- [`addresses(limit, offset)`](https://github.com/justync7/k.lua/blob/master/k.lua#67) ([api docs](http://krist.ceriat.net/docs/#api-AddressGroup-GetAddresses)) - List all addresses
-- [`rich(limit, offset)`](https://github.com/justync7/k.lua/blob/master/k.lua#73) ([api docs](http://krist.ceriat.net/docs/#api-AddressGroup-GetRichAddresses)) - List the addresses with the highest balance
-- [`transactions(limit, offset)`](https://github.com/justync7/k.lua/blob/master/k.lua#79) ([api docs](http://krist.ceriat.net/docs/#api-TransactionGroup-GetTransactions)) - List all transactions
-- [`latestTransactions(limit, offset)`](https://github.com/justync7/k.lua/blob/master/k.lua#85) ([api docs](http://krist.ceriat.net/docs/#api-TransactionGroup-GetLatestTransactions)) - List all recent transactions
-- [`transaction(transactionID)`](https://github.com/justync7/k.lua/blob/master/k.lua#91) ([api docs](http://krist.ceriat.net/docs/#api-TransactionGroup-GetTransaction)) - Get information about a single transaction
-- [`makeTransaction(privatekey, to, amount, metadata)`](https://github.com/justync7/k.lua/blob/master/k.lua#97) ([api docs](http://krist.ceriat.net/docs/#api-TransactionGroup-MakeTransaction)) - Make a transaction
+- [`address(address)`](https://github.com/tmpim/k.lua/blob/master/k.lua#L48) ([api docs](http://krist.ceriat.net/docs/#api-AddressGroup-GetAddress)) - Gets information about an address, such as its balance
+- [`addressTransactions(address, limit, offset)`](https://github.com/tmpim/k.lua/blob/master/k.lua#L55) ([api docs](http://krist.ceriat.net/docs/#api-AddressGroup-GetAddressTransactions)) - Gets recent transactions by an address
+- [`addressNames(address)`](https://github.com/tmpim/k.lua/blob/master/k.lua#61) ([api docs](http://krist.ceriat.net/docs/#api-AddressGroup-GetAddressNames)) - Gets names owned by an address
+- [`addresses(limit, offset)`](https://github.com/tmpim/k.lua/blob/master/k.lua#67) ([api docs](http://krist.ceriat.net/docs/#api-AddressGroup-GetAddresses)) - List all addresses
+- [`rich(limit, offset)`](https://github.com/tmpim/k.lua/blob/master/k.lua#73) ([api docs](http://krist.ceriat.net/docs/#api-AddressGroup-GetRichAddresses)) - List the addresses with the highest balance
+- [`transactions(limit, offset)`](https://github.com/tmpim/k.lua/blob/master/k.lua#79) ([api docs](http://krist.ceriat.net/docs/#api-TransactionGroup-GetTransactions)) - List all transactions
+- [`latestTransactions(limit, offset)`](https://github.com/tmpim/k.lua/blob/master/k.lua#85) ([api docs](http://krist.ceriat.net/docs/#api-TransactionGroup-GetLatestTransactions)) - List all recent transactions
+- [`transaction(transactionID)`](https://github.com/tmpim/k.lua/blob/master/k.lua#91) ([api docs](http://krist.ceriat.net/docs/#api-TransactionGroup-GetTransaction)) - Get information about a single transaction
+- [`makeTransaction(privatekey, to, amount, metadata)`](https://github.com/tmpim/k.lua/blob/master/k.lua#97) ([api docs](http://krist.ceriat.net/docs/#api-TransactionGroup-MakeTransaction)) - Make a transaction
 
 ### Making a request
 To make a request, you need to `await()` the API call, for example:
