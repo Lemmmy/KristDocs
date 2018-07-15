@@ -22,7 +22,7 @@ It applies the following transformations:
 - Append `-000`
 
 #### k.lua
-If you are using [k.lua](https://github.com/justync7/k.lua/), you can use `k.toKristWalletFormat(privatekey)`.
+If you are using [k.lua](https://github.com/tmpim/k.lua/), you can use `k.toKristWalletFormat(privatekey)`.
 
 #### Plain lua
 This requires a [sha256 API](http://www.computercraft.info/forums2/index.php?/topic/8169-sha-256-in-pure-lua/). Example code to perform these operations would look like this:
